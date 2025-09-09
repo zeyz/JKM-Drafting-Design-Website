@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>JKM Drafting & Design — Residential House Plans in North Carolina</title>
+  <meta name="description" content="JKM Drafting & Design specializes in residential new construction, additions, and renovations. Request a free quote today." />
+  <meta name="theme-color" content="#111827" />
+  <link rel="icon" href="/favicon.ico" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="JKM Drafting & Design — Residential House Plans" />
+  <meta property="og:description" content="New builds, additions, and renovations. Permit-ready plans with fast turnaround in North Carolina." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/og-image.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind (CDN for quick iteration) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ["Inter", "ui-sans-serif", "system-ui"] },
+          colors: {
+            brand: {
+              600: '#f97316', /* orange from logo */
+              700: '#ea580c',
+              800: '#c2410c'
+            },
+            ink: {
+              900: '#111827' /* near-black */
+            },
+            accent: {
+              500: '#a3e635' /* lime/yellow callout like phone strip */
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+  </style>
+</head>
+<body class="bg-white text-ink-900 antialiased">
+  <!-- Top bar with phone/email -->
+  <div class="bg-ink-900 text-white text-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex items-center justify-between">
+      <a href="tel:19197504350" class="font-semibold hover:underline">(919) 750-4350</a>
+      <a href="mailto:josh@jkmdrafting.com" class="hover:underline">josh@jkmdrafting.com</a>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="sticky top-0 z-40 bg-white/90 backdrop-blur border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="#home" class="flex items-center gap-3">
+          <img src="jkm-logo.png" alt="JKM Drafting & Design logo" class="h-14 md:h-16 w-auto" />
+          <span class="sr-only">JKM Drafting & Design</span>
+        </a>
+        <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+          <a href="#services" class="hover:text-brand-700">Services</a>
+          <a href="#portfolio" class="hover:text-brand-700">Portfolio</a>
+          <a href="#about" class="hover:text-brand-700">About</a>
+          <a href="#contact" class="hover:text-brand-700">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="relative overflow-hidden bg-gradient-to-br from-gray-50 via-white to-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+      <div class="grid lg:grid-cols-12 gap-10 items-center">
+        <div class="lg:col-span-7">
+          <h1 class="text-4xl sm:text-5xl font-extrabold leading-tight tracking-tight">
+            Residential <span class="text-brand-700">house plans</span> — new builds, additions, and renovations.
+          </h1>
+          <p class="mt-5 text-lg text-gray-700 max-w-2xl">JKM Drafting & Design is a North Carolina design firm specializing in permit-ready plans for homeowners, builders, and remodelers. Clear communication, fast turnaround, and practical detail.
+          </p>
+        </div>
+        <div class="lg:col-span-5">
+          <div class="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
+            <div class="text-xs font-semibold uppercase tracking-wide text-gray-500">Get started</div>
+            <h3 class="mt-1 text-2xl font-bold">Free Project Quote</h3>
+            <p class="text-gray-600 text-sm">Tell us about your project. We typically reply within 1 business day.</p>
+            <form action="https://formsubmit.co/josh@jkmdrafting.com" method="POST" class="mt-4 grid grid-cols-1 gap-3">
+              <div class="grid sm:grid-cols-2 gap-3">
+                <input name="name" placeholder="Your name" required class="w-full rounded-lg border-gray-300 focus:border-brand-600 focus:ring-brand-600" />
+                <input type="email" name="email" placeholder="Email" required class="w-full rounded-lg border-gray-300 focus:border-brand-600 focus:ring-brand-600" />
+              </div>
+              <div class="grid sm:grid-cols-2 gap-3">
+                <input name="phone" placeholder="Phone (optional)" class="w-full rounded-lg border-gray-300 focus:border-brand-600 focus:ring-brand-600" />
+                <select name="project_type" class="w-full rounded-lg border-gray-300 focus:border-brand-600 focus:ring-brand-600">
+                  <option value="New Construction">New Construction</option>
+                  <option value="Addition">Addition</option>
+                  <option value="Renovation">Renovation</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+              <textarea name="message" rows="4" placeholder="Briefly describe your project" required class="w-full rounded-lg border-gray-300 focus:border-brand-600 focus:ring-brand-600"></textarea>
+              <input type="text" name="_honey" class="hidden" />
+              <button type="submit" class="mt-1 inline-flex justify-center px-5 py-3 rounded-xl bg-brand-600 text-white hover:bg-brand-700 font-semibold">Send Request</button>
+              <p class="text-xs text-gray-500">By submitting, you agree to be contacted about your project. No spam.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="py-16 sm:py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-end justify-between gap-6 mb-8">
+        <div>
+          <h2 class="text-3xl font-bold tracking-tight">Services</h2>
+          <p class="mt-2 text-gray-600">Right-sized drafting support for homeowners and builders.</p>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="rounded-2xl border border-gray-200 p-6">
+          <h3 class="text-xl font-semibold">New Construction Plans</h3>
+          <p class="mt-2 text-gray-600">From concept to permit-ready drawings with elevations, floor plans, and details.</p>
+        </div>
+        <div class="rounded-2xl border border-gray-200 p-6">
+          <h3 class="text-xl font-semibold">Additions & Renovations</h3>
+          <p class="mt-2 text-gray-600">Seamless updates to existing homes with structural awareness and practical design.</p>
+        </div>
+        <div class="rounded-2xl border border-gray-200 p-6">
+          <h3 class="text-xl font-semibold">Plan Revisions & Builder Sets</h3>
+          <p class="mt-2 text-gray-600">Modify existing plans, generate clean sets for bidding and permitting.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio / Gallery -->
+  <section id="portfolio" class="py-16 sm:py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold tracking-tight mb-8">Portfolio</h2>
+      <div class="relative w-full overflow-hidden rounded-2xl border border-gray-200">
+        <img id="gallery" src="portfolio1.jpg" alt="Portfolio image" class="w-full object-cover" />
+      </div>
+      <p class="mt-4 text-gray-500 text-sm">(Rotating project images will go here)</p>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-16 sm:py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-3 gap-10 items-center">
+      <div class="lg:col-span-2">
+        <h2 class="text-3xl font-bold tracking-tight">About JKM Drafting & Design</h2>
+        <p class="mt-3 text-gray-700">JKM Drafting & Design specializes in residential new construction, additions, and renovations. We focus on practical, buildable plans that make permitting straightforward and construction efficient. Based in Pikeville, NC and serving homeowners and builders across North Carolina.</p>
+        <div class="mt-6 flex gap-3">
+          <a href="#quote" class="inline-flex px-5 py-3 rounded-xl bg-brand-600 text-white hover:bg-brand-700 font-semibold">Start Your Quote</a>
+          <a href="mailto:josh@jkmdrafting.com" class="inline-flex px-5 py-3 rounded-xl border border-gray-300 hover:bg-gray-50 font-semibold">Email Us</a>
+        </div>
+      </div>
+      <div class="rounded-2xl border border-gray-200 p-6 bg-white">
+        <dl class="grid grid-cols-1 gap-4 text-sm">
+          <div>
+            <dt class="font-semibold">Phone</dt>
+            <dd><a href="tel:19197504350" class="text-brand-700 hover:underline">(919) 750-4350</a></dd>
+          </div>
+          <div>
+            <dt class="font-semibold">Email</dt>
+            <dd><a class="text-brand-700 hover:underline" href="mailto:josh@jkmdrafting.com">josh@jkmdrafting.com</a></dd>
+          </div>
+          <div>
+            <dt class="font-semibold">Location</dt>
+            <dd>Pikeville, NC</dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote / Contact Form (secondary) -->
+  <section id="quote" class="py-16 sm:py-20 bg-gray-50">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold tracking-tight">Request a Quote</h2>
+      <p class="mt-2 text-gray-600">Tell us a little about your project and we'll follow up with next steps.</p>
+      <form action="https://formsubmit.co/josh@jkmdrafting.com" method="POST" class="mt-8 grid grid-cols-1 gap-4">
+        <div class="grid sm:grid-cols-2 gap-4">
+          <label class="block">
+            <span class="text-sm font-medium">Name</span>
+            <input name="name" required class="mt-1 w-full rounded-xl border-gray-300 focus:border-brand-600 focus:ring-brand-600" />
+          </label>
+          <label class="block">
+            <span class="text-sm font-medium">Email</span>
+            <input type="email" name="email" required class="mt-1 w-full rounded-xl border-gray-300 focus:border-brand-600 focus:ring-brand-600" />
+          </label>
+        </div>
+        <div class="grid sm:grid-cols-2 gap-4">
+          <label class="block">
+            <span class="text-sm font-medium">Phone (optional)</span>
+            <input name="phone" class="mt-1 w-full rounded-xl border-gray-300 focus:border-brand-600 focus:ring-brand-600" />
+          </label>
+          <label class="block">
+            <span class="text-sm font-medium">Project Type</span>
+            <select name="project_type" class="mt-1 w-full rounded-xl border-gray-300 focus:border-brand-600 focus:ring-brand-600">
+              <option>New Construction</option>
+              <option>Addition</option>
+              <option>Renovation</option>
+              <option>Other</option>
+            </select>
+          </label>
+        </div>
+        <label class="block">
+          <span class="text-sm font-medium">Project Details</span>
+          <textarea name="message" rows="5" required class="mt-1 w-full rounded-xl border-gray-300 focus:border-brand-600 focus:ring-brand-600" placeholder="Square footage, goals, special requirements, etc."></textarea>
+        </label>
+        <input type="text" name="_gotcha" class="hidden" tabindex="-1" autocomplete="off" />
+        <button type="submit" class="mt-2 inline-flex justify-center px-5 py-3 rounded-xl bg-brand-600 text-white hover:bg-brand-700 font-semibold">Send</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Contact strip -->
+  <section id="contact" class="py-10" style="background: linear-gradient(90deg,#111827, #000);">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="rounded-2xl bg-white/5 border border-white/10 p-6 sm:p-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 text-white">
+        <div>
+          <h3 class="text-xl font-semibold">Ready to start?</h3>
+          <p class="text-white/80">Call <a class="underline" href="tel:19197504350">(919) 750-4350</a> or email <a class="underline" href="mailto:josh@jkmdrafting.com">josh@jkmdrafting.com</a></p>
+        </div>
+        <a href="#quote" class="inline-flex px-5 py-3 rounded-xl bg-brand-600 text-ink-900 font-semibold" style="color:#111827; background-color:#a3e635;">Request a Quote</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-10 border-t border-gray-200 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p class="text-sm text-gray-600">© <span id="year"></span> JKM Drafting & Design. All rights reserved.</p>
+        <div class="text-sm text-gray-600 flex items-center gap-3">
+          <a class="hover:text-brand-700" href="#services">Services</a>
+          <a class="hover:text-brand-700" href="#portfolio">Portfolio</a>
+          <a class="hover:text-brand-700" href="#quote">Quote</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Auto rotating gallery
+    const galleryImages = [
+      "portfolio1.jpg",
+      "portfolio2.jpg",
+      "portfolio3.jpg",
+      "portfolio4.jpg"
+    ];
+    let current = 0;
+    const gallery = document.getElementById("gallery");
+    setInterval(() => {
+      current = (current + 1) % galleryImages.length;
+      gallery.src = galleryImages[current];
+    }, 4000);
+  </script>
+
+ 
