@@ -14,6 +14,26 @@
   <meta property="og:type" content="website" />
   <meta property="og:image" content="/og-image.png" />
 
+  <!-- JSON-LD: LocalBusiness -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "JKM Drafting & Design",
+    "url": "https://jkmdrafting.com",
+    "image": "https://jkmdrafting.com/jkm-logo.png",
+    "telephone": "+1-919-750-4350",
+    "email": "josh@jkmdrafting.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Pikeville",
+      "addressRegion": "NC",
+      "addressCountry": "US"
+    },
+    "description": "Residential drafting and design services — permit-ready plans for new construction, additions, and renovations in North Carolina."
+  }
+  </script>
+
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -82,11 +102,17 @@
           <h1 class="text-4xl sm:text-5xl font-extrabold leading-tight tracking-tight">
             Residential <span class="text-brand-700">house plans</span> — new builds, additions, and renovations.
           </h1>
-          <p class="mt-5 text-lg text-gray-700 max-w-2xl">JKM Drafting & Design is a North Carolina design firm specializing in permit-ready plans for homeowners, builders, and remodelers. Clear communication, fast turnaround, and practical detail.
+          <p class="mt-5 text-lg text-gray-700 max-w-2xl">
+            JKM Drafting & Design is a North Carolina design firm specializing in
+            <a href="#services" class="text-brand-700 hover:underline">permit-ready plans</a> for homeowners, builders, and remodelers.
+            Clear communication, fast turnaround, and practical detail.
+            <a href="#quote" class="text-brand-700 hover:underline">Request a free quote</a>.
           </p>
         </div>
+
+        <!-- Quote card now has an id so #quote links work -->
         <div class="lg:col-span-5">
-          <div class="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
+          <div id="quote" class="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
             <div class="text-xs font-semibold uppercase tracking-wide text-gray-500">Get started</div>
             <h3 class="mt-1 text-2xl font-bold">Free Project Quote</h3>
             <p class="text-gray-600 text-sm">Tell us about your project. We typically reply within 1 business day.</p>
@@ -111,6 +137,7 @@
             </form>
           </div>
         </div>
+
       </div>
     </div>
   </section>
@@ -129,14 +156,17 @@
         <div class="rounded-2xl border border-gray-200 p-6">
           <h3 class="text-xl font-semibold">New Construction Plans</h3>
           <p class="mt-2 text-gray-600">From concept to permit-ready drawings with elevations, floor plans, and details.</p>
+          <a href="#quote" class="mt-3 inline-block text-sm text-brand-700 hover:underline">Get a quote →</a>
         </div>
         <div class="rounded-2xl border border-gray-200 p-6">
           <h3 class="text-xl font-semibold">Additions & Renovations</h3>
           <p class="mt-2 text-gray-600">Seamless updates to existing homes with structural awareness and practical design.</p>
+          <a href="#quote" class="mt-3 inline-block text-sm text-brand-700 hover:underline">Get a quote →</a>
         </div>
         <div class="rounded-2xl border border-gray-200 p-6">
           <h3 class="text-xl font-semibold">Plan Revisions & Builder Sets</h3>
           <p class="mt-2 text-gray-600">Modify existing plans, generate clean sets for bidding and permitting.</p>
+          <a href="#quote" class="mt-3 inline-block text-sm text-brand-700 hover:underline">Get a quote →</a>
         </div>
       </div>
     </div>
@@ -147,7 +177,8 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 class="text-3xl font-bold tracking-tight mb-8">Portfolio</h2>
       <div class="relative w-full overflow-hidden rounded-2xl border border-gray-200">
-        <img id="gallery" src="portfolio1.png" alt="Portfolio image" class="w-full object-cover" />
+        <!-- Lazy-loading and SEO-friendly alt text (updated by JS as images rotate) -->
+        <img id="gallery" src="portfolio1.png" loading="lazy" alt="Residential drafting project — example 1, North Carolina" class="w-full object-cover" />
       </div>
       <p class="mt-4 text-gray-500 text-sm"></p>
     </div>
@@ -164,7 +195,9 @@
           <a href="mailto:josh@jkmdrafting.com" class="inline-flex px-5 py-3 rounded-xl border border-gray-300 hover:bg-gray-50 font-semibold">Email Us</a>
         </div>
       </div>
-      <div class="rounded-2xl border border-gray-200 p-6 bg-white">
+
+      <!-- Contact anchor exists for top nav -->
+      <div id="contact" class="rounded-2xl border border-gray-200 p-6 bg-white">
         <dl class="grid grid-cols-1 gap-4 text-sm">
           <div>
             <dt class="font-semibold">Phone</dt>
@@ -185,35 +218,41 @@
 
   <!-- Footer -->
   <footer class="py-10 border-t border-gray-200 bg-white">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
-      <p class="text-sm text-gray-600">© <span id="year"></span> JKM Drafting & Design. All rights reserved.</p>
-      <div class="text-sm text-gray-600 flex items-center gap-3">
-        <a href="https://www.facebook.com/profile.php?id=61560595071169" target="_blank" rel="noopener" class="flex items-center">
-          <img src="facebook.png" alt="Facebook" class="h-9 w-9">
-        </a>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p class="text-sm text-gray-600">© <span id="year"></span> JKM Drafting & Design. All rights reserved.</p>
+        <div class="text-sm text-gray-600 flex items-center gap-3">
+          <a href="https://www.facebook.com/profile.php?id=61560595071169" target="_blank" rel="noopener" class="flex items-center">
+            <img src="facebook.png" alt="Facebook" class="h-9 w-9">
+          </a>
+        </div>
       </div>
     </div>
-  </div>
-</footer>
-
+  </footer>
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Auto rotating gallery
+    // Auto rotating gallery with alt text updates for SEO
     const galleryImages = [
       "portfolio1.png",
       "portfolio2.png",
       "portfolio3.png",
       "portfolio4.png"
     ];
+    const galleryAlts = [
+      "Residential drafting project — example 1, North Carolina",
+      "Residential drafting project — example 2, North Carolina",
+      "Home addition design — example 3, North Carolina",
+      "Renovation plan set — example 4, North Carolina"
+    ];
     let current = 0;
     const gallery = document.getElementById("gallery");
     setInterval(() => {
       current = (current + 1) % galleryImages.length;
       gallery.src = galleryImages[current];
+      gallery.alt = galleryAlts[current];
     }, 4000);
   </script>
-
- 
+</body>
+</html>
